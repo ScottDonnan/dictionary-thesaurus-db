@@ -17,7 +17,16 @@ class FavoritesController < ApplicationController
         else 
             render json: {errors: favorite.errors.full_messages}
         end
-        
+    end
+
+    def destroy
+        favorite = Favorite.find_by(id: params[:id])
+        if favorite
+            favorite.destroy
+            render json: "favorite deleted"
+        else
+            render json: {errors: "favorite not found"}, status: :not_found
+        end
     end
 
     def favorites_params
