@@ -1,5 +1,3 @@
 class FavoriteSerializer < ActiveModel::Serializer
-  attributes :id, :word_id, :user_id
-
-  belongs_to :word
+  attributes :id, :user_id, :name
 end

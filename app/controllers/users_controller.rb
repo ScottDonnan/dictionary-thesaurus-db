@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     def favorite_words
         user = User.find_by(id: params[:id])
-        fav_words = user.words
+        fav_words = user.favorites
         render json: fav_words
     end
 end

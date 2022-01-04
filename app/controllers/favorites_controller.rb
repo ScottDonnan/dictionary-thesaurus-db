@@ -12,10 +12,15 @@ class FavoritesController < ApplicationController
 
     def create
         favorite = Favorite.create(favorites_params)
-        render json: favorite
+        if favorite.valid?
+            render json: favorite
+        else 
+            render json: {errors: favorite.errors.full_messages}
+        end
+        
     end
 
     def favorites_params
-        params.permit(:user_id, :word_id)
+        params.permit(:user_id, :name)
     end
 end

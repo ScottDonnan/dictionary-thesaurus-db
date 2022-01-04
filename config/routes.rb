@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :words
   resources :favorites
   resources :users
   
