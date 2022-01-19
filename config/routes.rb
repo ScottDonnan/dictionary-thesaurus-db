@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   get 'session/create'
   get 'session/destroy'
   resources :favorites
