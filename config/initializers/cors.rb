@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://dictionary-thesaurus.herokuapp.com/'
+    origins 'https://dictionary-thesaurus.herokuapp.com/:80'
 
     resource '*',
       headers: :any,
