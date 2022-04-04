@@ -1,25 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This is the backend API for the dictionary-thesaurus application.  
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+### Required Gems
 
-* Configuration
+Please install these gems.
 
-* Database creation
+postgresql
 
-* Database initialization
+bcrypt
 
-* How to run the test suite
+active_model_serializers
 
-* Services (job queues, cache servers, search engines, etc.)
+## Before you begin
 
-* Deployment instructions
+Be sure to migrate the database with:  
+`rails db:migrate`
 
-* ...
-# phase-2-project-dictionary-backend
+Start the application server with:
+`rails server`
+
+That's it, from here you should be good to go.
