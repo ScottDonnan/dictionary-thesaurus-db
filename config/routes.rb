@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :words
   root 'welcome#index'
   get 'session/create'
   get 'session/destroy'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
 
   get "/me", to: "users#show"
   get '/users/favorite_words/:id', to: 'users#favorite_words'  
+  get '/word_search_list', to: 'words#word_search_list'
 
   delete "/logout", to: "sessions#destroy"
   

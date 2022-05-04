@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  times_searched: 1
 
 two:
   name: MyString
+  times_searched: 1
